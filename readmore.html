@@ -1,0 +1,292 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+    <title>AMIS</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <link rel="stylesheet" href="assets/css/main.css"/>
+</head>
+<body class="is-preload">
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+
+            <!-- Header -->
+            <header id="header">
+                <div class="logo">
+                    <a href="index.html" class="logo"><strong>AMIS</strong> - Algoritmi e Modelli per l'Imaging Science</a>
+                    <p>Intervento finanziato con risorse FSC 2014-2020 - Patto per lo Sviluppo della Regione Sardegna.</p>
+                </div>
+                <div class="float_right">
+                    <img class="logo_imgs" src="logos/fsc.png" alt="logo"/>
+                    <img class="logo_imgs" src="logos/ras.png" alt="logo"/>
+                </div>
+            </header>
+
+            <!-- Banner -->
+            <section id="banner">
+                <div class="content">
+                    <header>
+                        <h2>AMIS project summary</h2>
+                    </header>
+                    <p>L'Imaging Science (IS) è un argomento che riveste un'importanza crescente nelle scienze applicate. Essa affronta in maniera interdisciplinare molteplici aspetti che coinvolgono immagini, intese come
+segnali bidimensionali o multidimensionali. Tra le operazioni tipiche dell'IS ci sono il rilevamento, l'elaborazione, l'analisi, la trasformazione e, infine, la visualizzazione di immagini. I segnali misurati
+possono rappresentare fenomeni visibili o invisibili all'occhio umano, interessando l'intero spettro delle onde elettromagnetiche (EM) e delle onde meccaniche, in particolare: luce visibile, segnali radar,
+onde sismiche, onde cerebrali, etc. Conseguentemente l'IS trova applicazioni in molti ambiti scientifici.
+<br>
+Le applicazioni finali per le metodologie studiate sono la diagnostica medica e la diagnostica geofisica applicata alla geotecnica, all'ambiente, all'agricoltura, all'archeologia e ai beni culturali in
+genere.
+<br>
+Per quanto riguarda le applicazioni in Medicina, la maggioranza degli strumenti diagnostici moderni richiedono un'accurata elaborazione dei segnali rilevati per poter giungere ad una diagnosi. Gli esempi più noti sono la risonanza magnetica nucleare e la tomografia assiale computerizzata. In questo ambito rivestono particolare importanza la teoria delle equazioni integrali e, più in generale, dei problemi inversi. I modelli sono tipicamente caratterizzati dalla mancanza di unicità della soluzione e da una fortissima sensibilità alla propagazione degli errori sperimentali e di arrotondamento (ill-conditioning). Di recente, nell'analisi delle onde cerebrali, ha assunto un ruolo essenziale la teoria delle reti complesse, in quanto l'attività del cervello può essere ricondotta ad un grafo in cui i centri nervosi assumono il ruolo di nodi e gli archi segnalano l'attivazione di una connessione tra di essi. Questo ha consentito di utilizzare metodologie di analisi delle reti già sviluppate in altri ambiti, ma con
+specifiche difficoltà di implementazione dovute all'elevata dimensionalità dei dati rilevati da alcuni strumenti e dalla dipendenza dal tempo delle connessioni attive, con conseguenze sia sul piano numerico che modellistico. Infine, nella diagnostica risulta importante il problema della classificazione di immagini acquisite, ad esempio mediante microscopio, allo scopo di riconoscere particolari strutture, associabili ad eventuali patologie. Un approccio tipico per questo problema è quello di ricorrere a tecniche di pattern recognition per classificare l'immagine all'interno di un database precostituito.
+<br>
+Tra le applicazioni della Geofisica Applicata, oltre a quelle inerenti la ricerca petrolifera e mineraria in generale (ambiti in cui la Geofisica ha avuto maggiore diffusione e sviluppo) rivestono particolare importanza quelle riguardanti la caratterizzazione geotecnica dei terreni, l'individuazione e il monitoraggio dei contaminanti nei suoli e nelle falde, la stima e il monitoraggio del contenuto idrico e della salinità dei suoli agricoli, nonché l'individuazione e la caratterizzazione di strutture sepolte di tipo archeologico [Jol08]. I metodi di indagine più diffusamente utilizzati per tali applicazioni sono i metodi sismici, basati sulla propagazione delle onde sismiche, i metodi elettromagnetici in alta frequenza (georadar), basati sulla propagazione delle onde elettromagnetiche, i metodi elettromagnetici in bassa
+frequenza, basati sulla diffusione dei campi elettromagnetici nei mezzi elettricamente conduttivi, e i metodi geoelettrici, basati sulla propagazione delle correnti elettriche continue o alternate in bassa frequenza. In ogni caso, i parametri fisici dell'oggetto indagato (terreno o altra struttura) vengono stimati risolvendo un problema inverso che li rende congruenti con i dati sperimentali. Questo crea un parallelismo con le metodologie utilizzate, ad esempio, nella tomografia medica sia a livello di modellistica, con conseguente mancanza di unicità della soluzione e di forte propagazione degli errori sperimentali, che dal punto di vista del calcolo numerico, per la necessità di applicare metodi di regolarizzazione a problemi a larga scala. In particolare, come sarà spiegato meglio successivamente, dal punto di vista modellistico il problema inverso della tomografia è analogo al problema inverso dell'ottica geometrica. Quest'ultimo consiste nella determinazione di un opportuno sistema di equazioni differenziali a cui deve soddisfare l'indice di rifrazione del mezzo in cui si propaga la luce (considerato come funzione delle coordinate spaziali) in modo tale che la traiettoria avvenga su una curva prestabilita, o più precisamente, su una data famiglia di curve. In maniera analoga, in tomografia diventa importante essere in grado di determinare la velocità di propagazione della radiazione (sismica o raggi X a seconda dell'applicazione), che è, in generale, una funzione della posizione.
+<br>
+In Archeologia, oltre alle tecniche di indagine mirate a rilevare la presenza di reperti archeologici nel sottosuolo, assumono importanza sempre più rilevante le tecniche di supporto all'interpretazione dei dati che si basano, ad esempio, sulla classificazione (fisica e spaziale) dei segnali raccolti. Collocare in ordine cronologico le unità di scavo all'interno di un sito archeologico, utilizzando come discriminante la tipologia di reperti trovati nelle unità, viene detto seriazione. Si tratta di un problema che si incontra in altri settori applicativi, quali la Genetica, ed è collegato ad importanti problemi algebrici, come la riduzione di banda di matrici sparse e il "consecutive ones problem". Il problema può essere rappresentato mediante un grafo bipartito ed analizzato con tecniche di analisi di reti complesse. Nell'ambito della documentazione dei reperti archeologici, e in particolare di petroglifi (graffiti murali) e bassorilievi, gioca un ruolo importante la realizzazione di modelli virtuali tridimensionali che possano essere analizzati al computer e riprodotti mediante stampanti 3D, in modo da consentire un accesso diffuso a reperti che si trovano in siti difficilmente raggiungibili e/o
+preservarli dall'usura. Le cosiddette metodologie "shape from shading", tipiche della Computer Vision, consentono la realizzazione di tali modelli a partire da semplici immagini fotografiche. Le tecniche "photometric stereo" e "multiview" sono le più utilizzate a questo scopo e richiedono la risoluzione di problemi ai minimi quadrati di grande dimensione e di sistemi di equazioni differenziali a derivate parziali (PDE).
+<br>
+Come appena osservato, ciò che accomuna applicazioni apparentemente così distanti tra loro, è che il loro studio richiede forti competenze matematiche sia in ambito algoritmico che modellistico, oltre, naturalmente, una profonda conoscenza dei fenomeni fisici alla base dei processi studiati che giustifica il coinvolgimento dei settori specifici.
+<br>
+Il progetto si articola su quattro tematiche principali:
+<ol>
+<li> Problemi Inversi in Geofisica, </li>
+<li> Analisi di Reti Complesse e Neuro-Imaging, </li>
+<li> Image Processing e Pattern Recognition, </li>
+<li> Shape from Shading e Archeologia. </li>
+</ol>
+Nella sezione <a href="researchlines.html">Research lines</a></li> verranno descritti i vari aspetti di tali tematiche, distinguendo tra quelli che riguardano l'avanzamento della ricerca di base nei singoli settori e quelli che implicano la loro interazione.
+</p>
+<h2>Obiettivi del progetto</h2>
+<ol>
+<h4><li>Problemi inversi in Geofisica</li></h4>
+<ul>
+<li> Sviluppo di un metodo iterativo di regolarizzazione per problemi nonlineari a larga scala, basato sull'uso congiunto del metodo di Tikhonov e della TSVD.</li>
+<li> Realizzazione di una procedura numerica per la risoluzione di equazioni integrali del primo e del secondo tipo, basata sull'accoppiamento di formule gaussiane e anti-gaussiane. Tale approccio dovrebbe verosimilmente condurre ad un incremento della precisione di entrambe le formule e fornire un limite superiore per l'errore di approssimazione commesso.</li>
+<li> Impostazione del problema inverso in Ottica Geometrica nel caso in cui la propagazione della luce avvenga in un mezzo inomogeneo. A tal proposito si intende determinare il sistema di equazioni differenziali a cui deve soddisfare l'indice di rifrazione e sviluppare procedure analitiche e numeriche atte a risolverlo.</li>
+<li> Deduzione e risoluzione di modelli nel caso anisotropo, sia per via analitica che numerica, sotto l'ipotesi che la lunghezza d'onda delle radiazioni sia non trascurabile, utilizzando le leggi dell'Ottica Fisica e, in particolare, le equazioni di Maxwell.</li>
+<li> Sviluppo di una procedura di inversione congiunta che combini la FWI di dati sismici con l'inversione non lineare dei dati elettromagnetici. L'integrazione dei dati elettromagnetici, sensibili alle caratteristiche idrauliche del mezzo (porosità, caratteristiche dei fluidi, etc.), con i dati sismici, sensibili alle caratteristiche viscoelastiche del mezzo, produce dei modelli di terreno con meno incertezze e di
+grande utilità nella diagnostica ambientale. Tale procedura, ripetuta nel tempo, può fornire un ottimo strumento geofisico per il monitoraggio ambientale dei terreni superficiali e per il monitoraggio delle attività di cattura e sequestro geologico della CO2.</li>
+<li> In ambito microgeofisico, applicazione di tecniche di estrazione delle informazioni significative da dati termografici e multispettrali. Uno degli obiettivi specifici di tali applicazioni sarà quello di poter processare con tecniche PCA o simili grandi moli di dati al fine di poter eseguire una diagnostica uniforme su grandi superfici di pregio.</li>
+</ul>
+<h4><li> Analisi di Reti Complesse e Neuro-Imaging</li></h4>
+<ul>
+<li> Applicazione di algoritmi di Krylov all'analisi di reti multilayer, sfruttando metriche di ranking per i nodi basate su funzioni della matrice di incidenza. Tecniche analoghe verranno applicate ai grafi bipartiti associati ai problemi di seriazione.</li>
+<li> Analisi di segnali cerebrali EEG e confronto tra le più comuni tecniche finora utilizzate per la caratterizzazione del network funzionale e un nuovo approccio fondato sull'analisi multilayer che permetta di tener conto sia della distribuzione del segnale sui vari ritmi cerebrali e sia dell'evoluzione temporale del network funzionale.</li>
+</ul>
+<h4><li> Image Processing e Pattern Recognition</li></h4>
+<ul>
+<li> Implementazione di algoritmi veloci ed accurati per l'analisi ed elaborazione di immagini basati su momenti ortogonali, con particolare attenzione alle immagini in campo biomedico, e verifica della loro efficacia su dataset pubblici, in vista di un'applicazione in ambito diagnostico.</li>
+<li> Per quanto riguarda il telerilevamento termico, sviluppo di metodi per l'evidenziazione di anomalie in serie temporali non-stazionarie. Si pensa di applicare tecniche di pattern detection per la correlazione delle stesse con l'attività sismica delle aree osservate.</li>
+<li> Applicazione di analoghe tecniche di pattern detection a dati geofisici per l'archeologia, al fine di classificare le anomalie rilevate sia sfruttando il contenuto informativo delle singole tracce o di famiglie delle stesse, sia ricercando particolari conformazioni o proprietà geometriche delle loro distribuzioni tridimensionali.</li>
+</ul>
+<h4><li> Shape from Shading e Archeologia</li></h4>
+<ul>
+<li> Realizzazione di un software open source destinato alla ricerca archeologica, utilizzabile da personale non esperto, che consenta di costruire in tempo reale modelli 3D accurati di petroglifi osservati in fase di scavo.</li>
+</ul>
+</ol>
+<h2>Strumentazione e risorse di calcolo a disposizione del progetto</h2>
+<ul>
+<li> Vari computer ad alte prestazioni dotati di software scientifico disponibili in rete sia come motori di calcolo che come server.</li>
+<li> Strumentazione geofisica: unità sismometriche da 120 canali, unità GPR monostatiche e bistatiche, sistema GPR multicanale (16 antenne, 200 MHz), strumentazione TDEM e FDEM (varie profondità di indagine), georesistivimetro Syscal Pro, termocamera con acquisizione programmabile, strumentazione per riflettografia multispettrale.</li>
+<li> Strumentazione biomedica: Choosemuse wireless EEG 7 canali dry, Enobio 8 wireless EEG 8 canali, Micromed Brain quick HD EEG 64 canali.</li>
+</ul>
+                </div>
+               <!-- <span class="image object">
+					<img src="images/pic10.jpg" alt=""/>
+				</span> -->
+            </section>
+
+            <!-- Section -->
+ <!--		<section>
+                <header class="major">
+                    <h2>Paragrafo vetrina (da rimuovere?)</h2>
+                </header>
+                <div class="features">
+                    <article>
+                        <span class="icon fa-gem"></span>
+                        <div class="content">
+                            <h3>Portitor ullamcorper</h3>
+                            <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam
+                                facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+                        </div>
+                    </article>
+                    <article>
+                        <span class="icon solid fa-paper-plane"></span>
+                        <div class="content">
+                            <h3>Sapien veroeros</h3>
+                            <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam
+                                facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+                        </div>
+                    </article>
+                    <article>
+                        <span class="icon solid fa-rocket"></span>
+                        <div class="content">
+                            <h3>Quam lorem ipsum</h3>
+                            <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam
+                                facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+                        </div>
+                    </article>
+                    <article>
+                        <span class="icon solid fa-signal"></span>
+                        <div class="content">
+                            <h3>Sed magna finibus</h3>
+                            <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam
+                                facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Section -->
+<!--            <section>
+                <header class="major">
+                    <h2>Paragrafo progetti (da rimuovere?)</h2>
+                </header>
+                <div class="posts">
+                    <article>
+                        <a href="#" class="image"><img src="images/pic01.jpg" alt=""/></a>
+                        <h3>Interdum aenean</h3>
+                        <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis
+                            ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+                        <ul class="actions">
+                            <li><a href="#" class="button">More</a></li>
+                        </ul>
+                    </article>
+                    <article>
+                        <a href="#" class="image"><img src="images/pic02.jpg" alt=""/></a>
+                        <h3>Nulla amet dolore</h3>
+                        <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis
+                            ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+                        <ul class="actions">
+                            <li><a href="#" class="button">More</a></li>
+                        </ul>
+                    </article>
+                    <article>
+                        <a href="#" class="image"><img src="images/pic03.jpg" alt=""/></a>
+                        <h3>Tempus ullamcorper</h3>
+                        <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis
+                            ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+                        <ul class="actions">
+                            <li><a href="#" class="button">More</a></li>
+                        </ul>
+                    </article>
+                    <article>
+                        <a href="#" class="image"><img src="images/pic04.jpg" alt=""/></a>
+                        <h3>Sed etiam facilis</h3>
+                        <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis
+                            ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+                        <ul class="actions">
+                            <li><a href="#" class="button">More</a></li>
+                        </ul>
+                    </article>
+                    <article>
+                        <a href="#" class="image"><img src="images/pic05.jpg" alt=""/></a>
+                        <h3>Feugiat lorem aenean</h3>
+                        <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis
+                            ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+                        <ul class="actions">
+                            <li><a href="#" class="button">More</a></li>
+                        </ul>
+                    </article>
+                    <article>
+                        <a href="#" class="image"><img src="images/pic06.jpg" alt=""/></a>
+                        <h3>Amet varius aliquam</h3>
+                        <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis
+                            ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+                        <ul class="actions">
+                            <li><a href="#" class="button">More</a></li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+-->
+
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+        <div class="inner">
+
+            <!-- Menu -->
+            <nav id="menu">
+                <header class="major">
+                    <h2>Menu</h2>
+                </header>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="participants.html">Participants</a></li>
+                    <li><a href="researchlines.html">Research lines</a></li>
+                    <li><a href="publications.html">Publications</a></li>
+		    <li><a href="software.html">Software</a></li>
+                </ul>
+            </nav>
+
+            <!-- Section
+            <section>
+                <header class="major">
+                    <h2>Ante interdum</h2>
+                </header>
+                <div class="mini-posts">
+                    <article>
+                        <a href="#" class="image"><img src="images/pic07.jpg" alt=""/></a>
+                        <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+                    </article>
+                    <article>
+                        <a href="#" class="image"><img src="images/pic08.jpg" alt=""/></a>
+                        <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+                    </article>
+                    <article>
+                        <a href="#" class="image"><img src="images/pic09.jpg" alt=""/></a>
+                        <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+                    </article>
+                </div>
+                <ul class="actions">
+                    <li><a href="#" class="button">More</a></li>
+                </ul>
+            </section>
+            -->
+
+            <!-- Section -->
+            <section>
+                <header class="major">
+                    <h2>Contatti</h2>
+                </header>
+                <ul class="contact">
+                    <li class="icon solid fa-envelope">amis@bugs.unica.it</li>
+                    <li class="icon solid fa-phone">(000) 000-0000</li>
+                    <li class="icon solid fa-home">University of Cagliari, Italy
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Footer -->
+            <footer id="footer">
+                <p class="copyright">&copy; University of Cagliari. Webmaster: Andrea Loddo. Demo Images: <a href="https://unsplash.com">Unsplash</a>.
+                    Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+            </footer>
+
+        </div>
+    </div>
+
+</div>
+
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>

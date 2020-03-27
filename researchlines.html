@@ -1,0 +1,187 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+    <title>AMIS</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <link rel="stylesheet" href="assets/css/main.css"/>
+</head>
+<body class="is-preload">
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+
+            <!-- Header -->
+            <header id="header">
+                <div class="logo">
+                    <a href="index.html" class="logo"><strong>AMIS</strong> - Algoritmi e Modelli per l'Imaging Science</a>
+                    <p>Intervento finanziato con risorse FSC 2014-2020 - Patto per lo Sviluppo della Regione Sardegna.</p>
+                </div>
+                <div class="float_right">
+                    <img class="logo_imgs" src="logos/fsc.png" alt="logo"/>
+                    <img class="logo_imgs" src="logos/ras.png" alt="logo"/>
+                </div>
+            </header>
+
+            <!-- Section -->
+            <section>
+                <header class="major">
+                    <h2>Research lines</h2>
+                </header>
+                <div class="content">
+                    <article>
+                        <a class="image"><img src="images/picGeo.jpeg" width="400" height="250"></a>
+                        <h3>Problemi inversi in Geofisica</h3>
+                        <p>In questo filone di ricerca assumono particolare importanza i metodi di regolarizzazione e la risoluzione di equazioni integrali.
+<br>
+Riguardo ai problemi lineari, verrà approfondita la relazione tra gli spazi di Krylov e gli spazi descritti da vettori singolari. Questi ultimi vengono comunemente utilizzati per descrivere soluzioni regolarizzate, ma la loro costruzione è difficoltosa per problemi di grandi dimensioni. Ricerche recenti hanno mostrato che gli spazi di Krylov descrivono approssimativamente lo stesso ambiente, se i valori singolari tendono a zero con sufficiente rapidità. Si pensa inoltre che una formulazione a blocchi possa accrescere ulteriormente l'efficienza degli algoritmi. Un nuovo metodo di regolarizzazione introdotto in [GR3], verrà ulteriormente analizzato nel caso di problemi di regolarizzazione in forma sia standard che generale, e verrà studiata la sua estensione a problemi nonlineari.
+<br>
+Nell'ambito di fenomeni nonlineari, si intende anche indagare l'applicazione diretta di metodi di regolarizzazione classici, quali Tikhonov e TSVD, a problemi malposti nonlineari frequenti in Geofisica applicata, in luogo dell'usuale loro applicazione alle linearizzazioni introdotte dai metodi iterativi comunemente utilizzati. Risultati preliminari hanno mostrato che l'introduzione di operatori di regolarizzazione basati su norme non euclidee, pur introducendo un'ulteriore nonlinearità al problema iniziale, sono in grado di riprodurre più efficacemente discontinuità nella soluzione, la cui presenza è giustificata nella prospezione sismica o EM in terreni stratificati.
+<br>
+La risoluzione numerica dei modelli ottenuti richiede tecniche avanzate di ottimizzazione nonlineare. A questo riguardo sono in corso di studio nuovi algoritmi 2-fasi allo scopo di accelerare metodi geometrici in metrica holderiana che utilizzano, ad ogni iterazione, un insieme di possibili costanti di Lipschitz. Le tecniche di ottimizzazione globale studiate verranno inoltre modificate, nell'ottica di introdurre termini regolarizzanti che possano controllare efficacemente la propagazione degli errori dovuta al malcondizionamento. Per tali metodi si dimostrerà in opportuni spazi funzionali la convergenza e la stabilità, si studierà la complessità di calcolo e si effettuerà un'ampia sperimentazione numerica per verificare l'effettiva accuratezza dei risultati e la riduzione del costo computazionale.
+<br>
+Verrà analizzata nel dettaglio la risoluzione numerica di alcune tipologie di equazioni integrali. Verranno studiate equazioni integrali di prima specie che intervengono nello studio della conduttività elettrica del sottosuolo ed equazioni integrali singolari di Cauchy che si incontrano nella teoria dell'elasticità. Per queste classi di equazioni saranno proposti metodi di tipo Nystrom e/o collocazione per equazioni su intervalli limitati e non, basati su formule di quadratura di tipo gaussiano e anti-gaussiano [GR8, Laur96, Pran15]. Lo studio di modelli di evoluzione nonlineare di tipo integrabile
+conduce inoltre a particolari equazioni di Volterra. Verranno analizzate due PDE nonlineari di tipo integrabile: l'equazione di Korteweg-de Vries e l'equazione nonlineare di Schroedinger. Ricerche in atto consentono di affermare che, per ottenere un'approssimazione su tutto il semipiano, è sufficiente risolvere l'equazione su un apposito triangolo (triangolo computazionale) la cui ampiezza dipende fondamentalmente dalla soluzione iniziale dell'equazione. La risoluzione numerica può essere ottenuta considerando una tecnica alle differenze finite analoga a quella sviluppate in [LF1]. Essa presenta tuttavia una complessità di calcolo eccessiva in vista di un impiego in applicazioni ingegneristiche. Per questo motivo si pensa a una tecnica non standard agli elementi finiti basata sull'uso di box-splines a supporto minimo e una approssimazione di Galerkin. La sperimentazione numerica trarrà vantaggio dalle soluzioni esatte riportate in [Akto06].
+<br>
+Il programma dell'attività relativa al problema inverso in Ottica Geometrica può essere descritta come segue:
+<ol>
+<li>Estendere i risultati trovati in [Borg05, Borg16] al caso più realistico in cui il mezzo sia non omogeneo e anisotropo determinando il sistema di equazioni differenziali che deve essere soddisfatto dall'indice di rifrazione del mezzo. Uno degli approcci possibili è quello di ricorrere al principio (variazionale) di Fermat, tenendo in debita considerazione l'aggiunta del tensore di anisotropia. In particolare, uno dei problemi derivanti da tale approccio concerne la geometria delle famiglie di curve. Già nel caso isotropo [Borg16] è stato dimostrato che per poter risolvere il problema inverso la famiglia di curve deve necessariamente essere una congruenza normale. Occorre pertanto determinare l'analogo di questa condizione nel più complicato caso anisotropo.</li>
+<li>Sviluppare procedure numeriche per la soluzione del sistema di equazioni differenziali corrispondenti al problema inverso. In particolare, poiché il problema è formulato su un insieme aperto illimitato, si cercheranno ragionevoli condizioni sul bordo in modo da poter integrare il modello, se non per via analitica, quanto meno per via numerica.</li> 
+</ol>
+Per il problema inverso in Ottica Fisica si procederà innanzitutto alla deduzione e risoluzione dei modelli nel caso anisotropo. A questo fine, occorre tener presente il termine anisotropo nelle equazioni di Maxwell e da esse dedurre, tenendo conto di eventuali simmetrie imposte dalla specifica natura del problema, il modello integro-differenziale corrispondente. Per risolvere i modelli così ottenuti si tenterà
+di adottare un approccio analogo a quello seguito in [Akto90, Akto91, Akto95].
+<br>
+I citati metodi di regolarizzazione insieme alle procedure per la soluzione del problema diretto, formulato in termini differenziali o integrali, saranno utilizzati per la soluzione di una pluralità di problemi di imaging geofisico tipici delle tecniche d'indagine sismica ed EM. Per entrambi i metodi d'indagine, in particolare, si farà riferimento alla FWI e alla migrazione prestack e poststack, utilizzando sia dati
+sintetici che dati reali. Per la sismica si utilizzeranno i dataset "SEG/EAGE salt model", "Sigsbee model" e "Marmousi model", disponibili online e utilizzati dalla comunità geofisica per testare le procedure di inversione tomografica e di migrazione. Per l'imaging georadar, invece, i dati sintetici verranno generati con il codice opensource "gprMax". I dati reali, sia sismici che radar, saranno acquisiti nel test site descritto in [Deid01].
+<br>
+Le prestazioni della FWI dipendono, oltre che dalla adeguatezza della soluzione del problema diretto nel dominio del tempo [Carc10] o nel dominio della frequenza [Luci10], dalla soluzione del problema inverso nonlineare, ancora particolarmente problematica [Viri09] e per la quale devono essere ancora risolte alcune criticità quali, per esempio, la verosimiglianza dei modelli di partenza da utilizzare nel processo di inversione iterativo. Per meglio comprendere tale criticità e trovare possibili soluzioni, prima di eseguire la FWI dei dati sismici e dei dati GPR multi-offset, gli stessi saranno pre-elaborati secondo la tecnica di imaging convenzionale CMP (Common Mid Point) stack o secondo la tecnica di imaging CRS (Common Reflection Surface) stack [Deid12, Heil13] per la generazione di modelli di partenza ottimali per il processo iterativo della FWI. Le stesse pre-elaborazioni saranno anche utilizzate per la migrazione prestack in profondita.
+<br>
+Ulteriori sperimentazioni riguarderanno i metodi EM induttivi sia in dominio di frequenza (FDEM) che in dominio di tempo (TDEM). Per entrambi i metodi si acquisiranno dati reali in corrispondenza di test site ben conosciuti [Deid01, Haak17]. In particolare, per il FDEM saranno utilizzati elettromagnetometri multifrequenza o con bobine a diversa distanza.
+<br>
+A scala ambientale si procederà a elaborazione, eventualmente anche congiunta, dei seguenti tipi di dati:
+<ul><br>
+<li> dati sismici attivi, </li>
+<li> dati di rumore ambientale, </li>
+<li> dati GPR, </li>
+<li> dati di induzione EM, </li>
+<li> dati di resistività elettrica e polarizzazione indotta (anche eventualmente
+spettrale), con acquisizioni in superficie o in foro. </li>
+</ul>
+Le sperimentazioni di inversione e simulazione, con la possibilità di implementare elaborazioni 3D e in time-lapse, saranno finalizzate a verificare la bontà delle strategie adottate in vari contesti di diagnostica ambientale.
+<br>
+Su scala architettonica potranno essere sperimentate strategie di inversione, eventualmente anche congiunta, dei seguenti tipi di dati relativi a murature storiche di pregio o modelli fisici reali:
+<ul><br>
+<li> dati GPR a riflessione, </li>
+<li> dati GPR per trans-illuminazione, </li>
+<li> dati di resistività elettrica e polarizzazione indotta, acquisizione su una o
+due superfici murarie, </li>
+<li> dati sonici. </li>
+</ul>
+Tali indagini saranno finalizzate a mettere in evidenza le tessiture costitutive delle murature ma anche fenomeni di degrado e umidità.
+<br>
+Nell'ambito della microgeofisica si potranno testare o sviluppare a piccola scala alcuni degli avanzamenti già proposti in ambito ambientale o archeologico. Saranno inoltre oggetto di ricerca le tecniche termografiche time-lapse e multispettrali, per le quali si procederà ad ottimizzare l'applicazione di tecniche di selezione dell'informazione e riduzione della dimensionalità dei dati, ad esempio la principal component analysis (PCA), su dataset più ampi di quelli presenti in letteratura.</p>
+                    </article>
+                    <article>
+                        <a class="image"><img src="images/pic02.jpg" alt=""/></a>
+                        <h3>Analisi di Reti Complesse e Neuro-Imaging</h3>
+                        <p>Uno degli obiettivi della ricerca prevede l'analisi delle attività funzionali del cervello tramite l'utilizzo della teoria delle reti complesse. E' usuale associare ad una rete complessa la matrice di adiacenza, che rappresenta le interazioni tra i suoi nodi, e caratterizzare la rete tramite particolari funzioni di tale matrice. Ci si propone di applicare tecniche di calcolo basate su proiezione in spazi di Krylov all'analisi di reti complesse derivanti da modelli di neuro-imaging.
+<br>
+Le neuroscienze si trovano oggi ad affrontare il problema relativo alla gestione dell'enorme volume di nuovi dati disponibili. Si pone quindi il problema della loro analisi con l'utilizzo di efficienti tecniche computazionali. In questa ottica, i tradizionali modelli statici e mono-strato, la cui analisi è stata affrontata dal gruppo di ricerca negli ultimi anni, forniscono un adeguato punto di partenza per le
+ricerche. Differenti modelli di rete hanno consentito di acquisire importanti conoscenze relative all'organizzazione strutturale e funzionale del cervello. Nonostante questo, la maggior complessità dei dati in nostro possesso richiede che nuovi e più sofisticati modelli e algoritmi Big Data siano sviluppati per la loro caratterizzazione. Tra questi nuovi approcci, le reti multilayer hanno recentemente visto interessanti applicazioni nel campo delle neuroscienze. Nello specifico, esse possono essere viste come "reti di reti", cioè reti i cui nodi sono essi stessi delle reti. Un caso particolare di rete multistrato è una rete dinamica o evolutiva nella quale i nodi, pur rimanendo invariati, interagiscono in modo diverso al passare del tempo. Uno dei nostri obiettivi è comprendere come questo approccio possa essere di aiuto nell'individuare importanti caratteristiche della rete cerebrale funzionale, non osservabili ed esplorabili tramite approcci tradizionali. In particolare, si intende sfruttare il modello multilayer per
+studiare le interazioni tra differenti ritmi cerebrali, generalmente studiati separatamente, e per consentire un'analisi spazio-temporale che possa descrivere l'evoluzione della rete cerebrale nel tempo. Tecniche computazionali che analizzano l'evoluzione delle connessioni della rete con l'utilizzo di funzioni matriciali sono state di recente studiate dal gruppo. Ci si propone quindi di utilizzare tali
+tecniche, non ancora applicate al caso di reti multilayer, per affrontare questo problema dal punto di vista modellistico e computazionale, in modo da fornire metodologie nuove ed efficienti per il monitoraggio di specifiche attività cerebrali.</p>
+                       
+                    </article>
+                    <article>
+                        <a class="image"><img src="images/pic03.jpg" alt=""/></a>
+                        <h3>Image Processing e Pattern Recognition</h3>
+                        <p>Dato l'elevato carico computazionale che caratterizza i momenti ortogonali e gli altri descrittori di textures, la ricerca si focalizzerà sulla formulazione di algoritmi veloci e stabili per l'analisi e l'elaborazione di immagini, con particolare attenzione alle immagini biomediche, soprattutto campioni istologici o di sangue acquisiti al microscopio.
+<br>
+Ci si propone, pertanto, di formulare e valutare soluzioni innovative nei seguenti ambiti.
+<ul>
+<li> Classificazione delle texture e sperimentazione sui dataset pubblici (DP): Brodatz, Mondial Marmi, Outex, Vectorial, Kylberg Sintorn, ALOT. </li>
+<li> Analisi e classificazione di immagini istologiche e sperimentazione sui DP: HistologyDS, Pap-smear, Lymphoma. </li>
+<li> Analisi e classificazione di immagini citologiche da microscopio, in presenza di eventuali patologie (malaria, leucemia) e sperimentazione sui DP: ALL, IUMS-IDB, SMC.</li>
+</ul>
+Tecniche di data mining e pattern detection saranno inoltre applicate a dati geofisici per l'archeologia, al fine di classificare le anomalie rilevate sia sfruttando il contenuto informativo di tracce singole o multiple, sia ricercando particolari conformazioni o proprietà geometriche delle loro distribuzioni tridimensionali. I relativi dataset saranno principalmente costituiti da dati densi (ad es. GPR) eventualmente supportati da tomografie elettriche.
+<br>
+La prima applicazione della tecnica Night Thermal Gradient al terremoto di L'Aquila 2009 lascia intravvedere margini di miglioramento nell'affinamento dei processi di interpolazione e ottimizzazione della media mobile preliminare, ma anche analisi in frequenza delle serie temporali, al fine di discriminare e ridurre ulteriormente gli effetti di rumore variabile (meteorologico, antropico, etc.) del segnale
+termico. La possibilità di accedere a grandi moli di dati termici satellitari attraverso i canali Eumetsat (principalmente direttamente dall'agenzia LandSaf) ed ai cataloghi dei dati sismologici (Ingv, CSEM-EMSC) permetterà di estendere la ricerca a molti casi di studio relativi a differenti condizioni sismologiche, comprese aree o periodi estesi di assenza di attività sismica significativa.</p>
+                       
+                    </article>
+ 		    <article>
+                        <a class="image"><img src="images/pic03.jpg" alt=""/></a>
+                        <h3>Shape from Shading e Archeologia</h3>
+                        <p>Si prevede di studiare vari problemi aperti nel photometric stereo, derivanti dalla mancanza di idealità nelle riprese reali. Nel modello base la posizione delle fonti d'illuminazione deve essere nota con
+precisione. C'è invece evidenza sperimentale che questa possa essere dedotta dalle immagini stesse. Si lavorerà quindi ad una dimostrazione formale di questo fatto e alla sua implementazione in un
+software applicativo. Inoltre il modello standard prevede che sia la fotocamera che le luci si trovano a distanza infinita dall'oggetto osservato. Verrà studiato un modello più generale che includa una
+geometria di ripresa più vicina a quella reale. Tutti gli algoritmi verranno applicati sia a dati sintetici che a dataset sperimentali derivanti da reperti archeologici e microscopia elettronica.</p>
+                
+                    </article>
+                    
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+        <div class="inner">
+
+            <!-- Menu -->
+            <nav id="menu">
+                <header class="major">
+                    <h2>Menu</h2>
+                </header>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="participants.html">Participants</a></li>
+                    <li><a href="researchlines.html">Research lines</a></li>
+                    <li><a href="publications.html">Publications</a></li>
+		    <li><a href="software.html">Software</a></li>
+                </ul>
+            </nav>
+
+            <!-- Section -->
+            <section>
+                <header class="major">
+                    <h2>Contatti</h2>
+                </header>
+                <ul class="contact">
+                    <li class="icon solid fa-envelope">amis@bugs.unica.it</li>
+                    <li class="icon solid fa-phone">(000) 000-0000</li>
+                    <li class="icon solid fa-home">University of Cagliari, Italy
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Footer -->
+            <footer id="footer">
+                <p class="copyright">&copy; University of Cagliari. Webmaster: Andrea Loddo. Demo Images: <a href="https://unsplash.com">Unsplash</a>.
+                    Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+            </footer>
+
+        </div>
+    </div>
+
+</div>
+
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>
